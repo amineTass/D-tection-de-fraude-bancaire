@@ -131,17 +131,20 @@ de la classe minoritaire.
 
 ---
 
-## 📊 Résultats (à compléter)
+## 📊 Résultats
+
+Résultats sur le **jeu de test** (56 962 transactions, seuil de décision 0.5) :
 
 | Modèle               | ROC-AUC | PR-AUC | Précision | Rappel | F1 |
 |----------------------|---------|--------|-----------|--------|----|
-| Logistic Regression  | _—_     | _—_    | _—_       | _—_    | _—_ |
-| Random Forest        | _—_     | _—_    | _—_       | _—_    | _—_ |
-| XGBoost              | _—_     | _—_    | _—_       | _—_    | _—_ |
+| XGBoost              | 0.9673  | **0.8852** | 0.89 | 0.85 | 0.87 |
+| Random Forest        | **0.9828** | 0.8500 | 0.71 | 0.85 | 0.77 |
+| Logistic Regression  | 0.9721  | 0.7189 | 0.06 | 0.92 | 0.11 |
 
-> Lancez `notebooks/04_Evaluation.ipynb` puis reportez les valeurs ici.
-> Sur ce type de dataset, les métriques clefs sont le **Rappel** (ne pas
-> rater de fraude) et la **PR-AUC** (performance sur la classe minoritaire).
+> **XGBoost est retenu** : meilleure **PR-AUC** (0.8852), métrique
+> prioritaire sur données déséquilibrées. Il est configuré comme modèle
+> par défaut de `src/predict.py` et `app/app.py`.
+> Les métriques Précision/Rappel/F1 concernent la classe **Fraude (1)**.
 
 ---
 

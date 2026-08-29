@@ -25,7 +25,7 @@ from preprocessing import (
     prepare_full_pipeline,
 )
 
-FEATURES = FEATURE_COLUMNS + ["Time", "Amount"]
+FEATURES = ["Time"] + FEATURE_COLUMNS + ["Amount"]
 
 MODELS_DIR = "models"
 
@@ -53,7 +53,6 @@ def build_logistic_regression():
         class_weight="balanced",
         max_iter=2000,  # le solvant a besoin de plus d'itérations ici
         random_state=42,
-        n_jobs=-1,
         solver="liblinear",
     )
 
