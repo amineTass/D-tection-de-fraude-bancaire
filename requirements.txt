@@ -1,0 +1,17 @@
+# Machine learning
+numpy
+pandas
+scikit-learn
+xgboost
+imbalanced-learn
+
+# Visualisation
+matplotlib
+seaborn
+
+# Interface & persistance
+streamlit
+joblib
+
+# Notebooks
+jupyter

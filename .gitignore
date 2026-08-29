@@ -1,0 +1,36 @@
+# Environnement virtuel
+venv/
+.venv/
+env/
+.env
+
+# Données (volumineuses, à télécharger depuis Kaggle)
+data/*.csv
+data/*.db
+data/*.raw
+
+# Modèles entraînés
+models/*.joblib
+models/*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Logs & divers
+*.log
+.DS_Store
+streamlit/
